@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1243</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Concurrent Job Processing</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="GroupBox_Worker1">
+      <property name="title">
+       <string>Worker 1</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opStatus1</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="opStatus1">
+         <property name="text">
+          <string>Idle</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Jobs completed:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opJobsCompleted1</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="opJobsCompleted1">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QTableWidget" name="opTableJobs1">
+         <column>
+          <property name="text">
+           <string>Job ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Assigned Worker</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Job Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Create Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Complete Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Input parameter</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="GroupBox_Worker2">
+      <property name="title">
+       <string>Worker 2</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opStatus2</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="opStatus2">
+         <property name="text">
+          <string>Idle</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Jobs completed:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opJobsCompleted2</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="opJobsCompleted2">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QTableWidget" name="opTableJobs2">
+         <column>
+          <property name="text">
+           <string>Job ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Assigned Worker</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Job Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Create Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Complete Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Input parameter</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QGroupBox" name="GroupBox_Worker3">
+      <property name="title">
+       <string>Worker 3</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opStatus3</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="opStatus3">
+         <property name="text">
+          <string>Idle</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Jobs completed:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opJobsCompleted3</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="opJobsCompleted3">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QTableWidget" name="opTableJobs3">
+         <column>
+          <property name="text">
+           <string>Job ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Assigned Worker</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Job Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Create Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Complete Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Input parameter</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QGroupBox" name="GroupBox_Worker4">
+      <property name="title">
+       <string>Worker 4</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opStatus4</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="opStatus4">
+         <property name="text">
+          <string>Idle</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>Jobs completed:</string>
+         </property>
+         <property name="buddy">
+          <cstring>opJobsCompleted4</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="opJobsCompleted4">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QTableWidget" name="opTableJobs4">
+         <column>
+          <property name="text">
+           <string>Job ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Assigned Worker</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Job Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Create Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Complete Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Input parameter</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="4">
+     <widget class="QGroupBox" name="GroupBox_Jobs">
+      <property name="title">
+       <string>Jobs</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="1">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btnAddJob">
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="text">
+          <string>Add to work queue</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Running jobs</string>
+         </property>
+         <property name="buddy">
+          <cstring>opRunningJobs</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Total jobs added</string>
+         </property>
+         <property name="buddy">
+          <cstring>opTotalJobsAdded</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="opTotalJobsAdded">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Pending jobs</string>
+         </property>
+         <property name="buddy">
+          <cstring>opPendingJobs</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <widget class="QTableWidget" name="opTableQueuedJobs">
+         <property name="showGrid">
+          <bool>true</bool>
+         </property>
+         <column>
+          <property name="text">
+           <string>Job ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Assigned Worker</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Job Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Create Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Complete Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Input parameter</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="inpParam"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Completed jobs</string>
+         </property>
+         <property name="buddy">
+          <cstring>opCompletedJobs</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="opPendingJobs">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="opRunningJobs">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="opCompletedJobs">
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1243</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <tabstops>
+  <tabstop>inpParam</tabstop>
+  <tabstop>btnAddJob</tabstop>
+  <tabstop>opTotalJobsAdded</tabstop>
+  <tabstop>opPendingJobs</tabstop>
+  <tabstop>opRunningJobs</tabstop>
+  <tabstop>opCompletedJobs</tabstop>
+  <tabstop>opStatus1</tabstop>
+  <tabstop>opJobsCompleted1</tabstop>
+  <tabstop>opStatus2</tabstop>
+  <tabstop>opJobsCompleted2</tabstop>
+  <tabstop>opStatus3</tabstop>
+  <tabstop>opJobsCompleted3</tabstop>
+  <tabstop>opStatus4</tabstop>
+  <tabstop>opJobsCompleted4</tabstop>
+  <tabstop>opTableQueuedJobs</tabstop>
+  <tabstop>opTableJobs1</tabstop>
+  <tabstop>opTableJobs2</tabstop>
+  <tabstop>opTableJobs3</tabstop>
+  <tabstop>opTableJobs4</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
